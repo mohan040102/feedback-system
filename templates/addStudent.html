@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Feedback System</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; overflow: hidden; width:100%;">
+      <a class="navbar-brand" href="/">DSEC</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/addStudent">Add Student <span class="sr-only"></span></a>
+          <a class="nav-item nav-link" href="/removeStudent">Remove Student</a>
+                    <a class="nav-item nav-link" href="/logout">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+    
+  <main>
+    <section class="vh-100 gradient-custom">
+            <div id="box1">
+
+                <div id="box" style="overflow-y: scroll;">
+                  <center>
+                  <h2>Dhanalakshmi Srinivasan Engineering College</h2><br>
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Feedback System</h3>
+                  <h4>Add Student</h4><br>
+                    <form action="/addStudentDb" method="POST" enctype="multipart/form-data">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="id">Student ID</span>
+                            </div>
+                            <input required type="number" name="id" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="name">Student Name</span>
+                          </div>
+                          <input required type="text" name="name" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Year</label>
+                              </div>
+                              <select required name="year" style="width:86%" class="custom-select" id="inputGroupSelect01">
+                                <option selected>Choose...</option>
+                                <option value="I">I</option>
+                                <option value="II">II</option>
+                                <option value="III">III</option>
+                                <option value="IV">IV</option>
+                              </select>
+                        </div>
+                        <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Department</label>
+                          </div>
+                          <select required style="width:83%" class="custom-select" id="inputGroupSelect01" name="dept">
+                            <option selected>Choose...</option>
+                            <option value="CSE">CSE</option>
+                            <option value="IT">IT</option>
+                            <option value="AI&DS">AI&DS</option>
+                            <option value="Mechanical">Mechanical</option>
+                            <option value="EEE">EEE</option>
+                            <option value="ECE">ECE</option>
+                            <option value="BME">BME</option>
+                            <option value="Aeronautical">Aeronautical</option>
+                            <option value="Chemical">Chemical</option>
+                          </select>
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                              <label class="input-group-text" for="inputGroupSelect01">Section</label>
+                            </div>
+                            <select required name="sec" style="width:86%" class="custom-select" id="inputGroupSelect01">
+                              <option selected>Choose...</option>
+                              <option value="A">A</option>
+                              <option value="B">B</option>
+                              <option value="C">C</option>
+
+                            </select>
+                          </div>
+                        
+                        <button type="submit" class="btn btn-dark">Submit</button>
+                      </form>
+                </center>
+                </div>
+            </div>
+    
+
+    </section>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
